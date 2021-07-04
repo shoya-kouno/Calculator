@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>関数電卓くん</title>
+        <link rel = "stylesheet" href="Design.css">
+    </head>
+
+    <body argin="center">
+
+        <script src = "calc.js"></script>
+
+        <script>
+            var calc = new Calculation();
+        </script>
+
+        <center>
+
+        <p class = title_str>関数電卓くん</p>
+
+        <input id="results" class = "input_str" type = "text" size ="40" style = "width:600px"/>
+        <p id="ans_s" class = ans_str>Ans = </p>
+
+        <input class = "input_button" type="button" value="7" onClick="calc.set('7')" />
+        <input class = "input_button" type="button" value="8" onClick="calc.set('8')" />
+        <input class = "input_button" type="button" value="9" onClick="calc.set('9')" />
+        <input class = "input_button" type="button"  style="background-color:red" value="DEL" onClick="calc.del()" />
+        <input class = "input_button_right" style="background-color:red" type="button" value="AC" onClick="calc.clear()" />
+        <input class = "input_button_func" type="button" value="Sin" onClick="calc.math_func('sin(')" />
+        <input class = "input_button_func" type="button" value="Cos" onClick="calc.math_func('cos(')" />
+        <input class = "input_button_func" type="button" value="Tan" onClick="calc.math_func('tan(')" /><br />
+
+        <input class = "input_button" type="button" value="4" onClick="calc.set('4')" />
+        <input class = "input_button" type="button" value="5" onClick="calc.set('5')" />
+        <input class = "input_button" type="button" value="6" onClick="calc.set('6')" />
+        <input class = "input_button" type="button" value="×" onClick="calc.fao('×')" />
+        <input class = "input_button_right" type="button" value="÷" onClick="calc.fao('÷')" />
+        <input class = "input_button_func" type="button" value="Asin" onClick="calc.math_func('asin(')" />
+        <input class = "input_button_func" type="button" value="Acos" onClick="calc.math_func('acos(')" />
+        <input class = "input_button_func" type="button" value="Atan" onClick="calc.math_func('atan(')" /><br />
+
+        <input class = "input_button" type="button" value="1" onClick="calc.set('1')" />
+        <input class = "input_button" type="button" value="2" onClick="calc.set('2')" />
+        <input class = "input_button" type="button" value="3" onClick="calc.set('3')" />
+        <input class = "input_button" type="button" value="+" onClick="calc.fao('+')" />
+        <input class = "input_button_right" type="button" value="-" onClick="calc.fao('-')" />
+        <input class = "input_button_func" type="button" value="EXP" onClick="calc.math_func('exp(')" />
+        <input class = "input_button_func" type="button" value="log" onClick="calc.math_func('log10(')" />
+        <input class = "input_button_func" type="button" value="ln" onClick="calc.math_func('log(')" /><br />
+
+        <input class = "input_button" type="button" value="0" onClick="calc.set('0')" />
+        <input class = "input_button" type="button" value="." onClick="calc.set('.')" />
+        <input class = "input_button" type="button" value="π" onClick="calc.fao('π')" />
+        <input class = "input_button" type="button" value="Ans" onClick="calc.set('Ans')" />
+        <input class = "input_button_right" type="button" value="=" onClick="calc.calculate()" />
+        <input class = "input_button_func" type="button" value="(" onClick="calc.set('(')" />
+        <input class = "input_button_func" type="button" value=")" onClick="calc.set(')')" />
+        <input class = "input_button_func" type="button" value="^" onClick="calc.fao('^')" /><br /> 
+        
+        <input id = "deg" type="radio" name="angle" value="deg" checked>Degree
+        <input id = "rad" type="radio" name="angle" value="rad">Radian
+
+        <p>・三角関数、logなどの値は必ず（）で囲って下さい。例：sin(90), log(5)</p>
+        <p>・角度の単位は度またはラジアンを必ず選択して下さい。また、式の記入中に変更しないで下さい。</p>
+        <p>・推奨ブラウザ：Google chrome、Microsoft Edge</p>
+
+        </center>
+
+    </body>
+</html>
